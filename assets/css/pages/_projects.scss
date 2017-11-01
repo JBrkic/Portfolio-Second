@@ -17,9 +17,6 @@
     box-sizing: border-box;
     padding: 0 rem(20);
     border-radius: 2px;
-    background-color: $dark;
-    background: linear-gradient( to bottom, rgba($dark, 0) 1%, rgba($dark, 0.9) 100%);
-    box-shadow: $shadow-large;
     h2 {
         flex-basis: 100%;
         margin: rem(60) 0 rem(40) 0;
