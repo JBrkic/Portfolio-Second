@@ -1,42 +1,40 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: rgba($light, 1);
-    box-shadow: $shadow;
     .header-logo-container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
-        margin: rem(30);
-        border: 2px solid $main;
-        border-radius: 2px;
+        margin: 0 rem(30) 0 0;
+        cursor: default;
         svg {
             align-self: stretch;
-            height: rem(68);
-            padding: rem(2) rem(2) rem(2) 0;
-            fill: $light;
+            padding: rem(32) rem(60);
+            fill: $dark;
             background-color: $main;
         }
         h1 {
-            font-weight: 400;
-            font-family: "Lato";
-            text-transform: uppercase;
-            font-size: rem(28);
+            align-self: center;
+            font-weight: 100;
+            font-family: "Lato", sans-serif;
+            font-size: rem(48);
             color: $main;
             line-height: 1;
-            margin: 0 rem(5);
+            margin: 0 rem(5) 0 0;
+            margin-bottom: rem(10);
         }
     }
     .nav {
         display: flex;
         justify-content: center;
         background-color: $dark;
+        box-shadow: $shadow;
         a {
             position: relative;
-            align-self: stretch;
             display: flex;
             align-items: center;
+            align-content: center;
             color: $light;
             text-transform: uppercase;
             font-weight: 300;
