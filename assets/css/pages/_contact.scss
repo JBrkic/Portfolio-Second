@@ -5,9 +5,22 @@
   justify-items: center;
   align-items: center;
   align-content: center;
-  margin-bottom: rem(60);
+  padding-bottom: rem(60);
+  background-color: $light;
   h2 {
+    position: relative;
     margin: rem(80) 0 rem(40) 0;
+    z-index: 1;
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: rem(18);
+      background: rgba($dark, 0.3);
+      z-index: -1;
+    }
   }
 }
 
@@ -22,19 +35,19 @@
     flex-flow: column;
     width: 40%;
     box-sizing: border-box;
-    padding: rem(20);
-    border-radius: 2px;
+    padding: 0 rem(40);
+    border-left: 2px solid #ffffff;
     input,
     textarea {
-      width: 100%;
+      width: 80%;
       margin-bottom: rem(10);
       font-size: rem(16);
       font-family: $font-body;
       padding: rem(10) rem(10);
       box-sizing: border-box;
-      border: 2px solid $dark;
+      border: 2px solid #ffffff;
       border-radius: 2px;
-      background-color: $light;
+      background-color: #ffffff;
       color: $dark;
       box-shadow: $shadow;
       transition: all 300ms ease-in-out;
@@ -42,6 +55,7 @@
      :hover,
      :focus {
       box-shadow: $shadow-large;
+      border-color: $main;
       transform: translateY(rem(-2));
     }
      :focus {
@@ -50,6 +64,7 @@
     }
     textarea {
       height: rem(150);
+      width: 100%;
     }
   }
   .button {
@@ -65,8 +80,22 @@
   }
   .email-me-button-container {
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    margin-right: rem(40);
+    justify-content: flex-start;
+    align-content: center;
+    text-align: left;
+    padding: rem(40);
     width: 40%;
-    text-align: right;
+    box-shadow: $shadow-large;
+  }
+  h4 {
+    text-align: left;
+    margin: 0;
+    text-transform: capitalize;
+    font-size: rem(24);
   }
   a.button {
     margin: 0;

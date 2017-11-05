@@ -12,17 +12,24 @@
 // Tools
 html {
     font-size: 16px;
-    background-color: $dark;
+    background-color: #ffffff;
 }
 
 body {
     font-family: $font-body;
     background-attachment: fixed;
     background-color: $light;
-    padding: rem(10);
-    margin: rem(20);
+    margin: rem(10);
     color: $dark;
+    overflow-y: scroll;
     animation: slide 20s linear infinite;
+}
+
+body.no-scroll {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0px;
 }
 
 .body-overlay {
@@ -46,15 +53,21 @@ h3,
 h4,
 h5,
 h6 {
+    text-transform: uppercase;
+    position: relative;
     font-family: $font-headings;
     font-weight: 500;
     color: $main;
 }
 
+h2 {
+    font-size: rem(32);
+}
+
 p {
-    font-size: rem(16);
-    line-height: 1.4;
-    font-weight: 400;
+    font-size: rem(18);
+    line-height: 1.8;
+    font-weight: 300;
 }
 
 a.button,
@@ -68,7 +81,7 @@ button.button {
     border: rem(2) solid $main;
     text-transform: uppercase;
     font-size: rem(16);
-    font-weight: 500;
+    font-weight: 400;
     font-family: $font-headings;
     letter-spacing: rem(1);
     border-radius: 2px;

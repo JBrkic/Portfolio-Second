@@ -1,31 +1,81 @@
 .about {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    box-sizing: border-box;
     width: 100%;
-    img.face {
+    height: 600px;
+    /* img.face {
         height: rem(300);
         margin: rem(60) 0;
         margin-top: rem(80);
         border-radius: 50%;
         overflow: hidden;
         box-shadow: $shadow;
+    } */
+    div.face {
+        padding: rem(15);
+        position: relative;
+        flex-basis: 50%;
+        background-color: #fff;
+        background-image: url("/assets/img/mered.png");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-right: 1px solid $light;
+        .face-overlay {
+            box-shadow: $shadow-large;
+            position: absolute;
+            background-image: url("/assets/img/megraysmall.png");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 80%;
+            width: 80%;
+            top: 10%;
+            left: 10%;
+            background-color: rgba($main, 0.3);
+        }
     }
     div.about-content {
+        background: linear-gradient( to right, rgba(#fff, 1) 1%, rgba($light, 1) 100%);
+        align-self: center;
+        flex-basis: 50%;
+        height: 100%;
         position: relative;
-        text-align: center;
-        max-width: 800px;
-        margin: 0 rem(20);
+        text-align: left;
         z-index: 2;
+        padding: 2%;
         box-sizing: border-box;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            box-shadow: $shadow-large;
+            height: 50%;
+            top: 35%;
+            left: -20%;
+            width: 100%;
+            background-color: rgba($dark, 0.2);
+        }
         h2 {
+            width: 80%;
             position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 50%;
+                height: rem(18);
+                background: rgba($dark, 0.3);
+            }
         }
         p {
+            max-width: 650px;
             position: relative;
             text-align: left;
-            overflow: hidden;
         }
     }
 }

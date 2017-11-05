@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400|Roboto:100,300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:100,300,400" rel="stylesheet">
+  <!-- <link rel='stylesheet prefetch' href='https://raw.githubusercontent.com/daneden/animate.css/master/animate.min.css'> -->
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Josip Brkic</title>
 </head>
@@ -149,18 +150,47 @@
         </h1>
 
       </div>
-      <nav class="nav">
+
+      <!-- <nav class="nav">
         <a href="">Home</a>
         <a href="">About</a>
         <a href="">Projects</a>
         <a href="">Contact</a>
-      </nav>
+      </nav> -->
+      <div class="button-wrap">
+        <div class="button_container" id="toggle">
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+        </div>
+      </div>
+      <div class="overlay" id="overlay">
+        <nav class="overlay-menu">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Work</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <div class="about">
-      <img class="face" src="assets/img/me8.jpg" alt="">
+      <!-- <img class="face" src="assets/img/me8.jpg" alt=""> -->
+      <div class="face">
+        <div class="face-overlay"></div>
+      </div>
       <div class="about-content">
-        <h2>Hello! I am Josip Brkic, front-end web developer based in Pleternica, Croatia.</h2>
+        <h2 class="heading">Hello! I am Josip Brkic, front-end web developer based in Pleternica, Croatia.</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A numquam, sequi adipisci enim inventore nobis voluptatum.
           Sed repellendus dolorum sunt sapiente, magnam laborum maiores? Omnis pariatur libero iusto aliquid saepe molestias
           error, ea nisi aliquam repellendus sequi hic fuga, accusamus, accusantium ipsa. Voluptates, mollitia ut. Cupiditate
@@ -171,39 +201,44 @@
     </div>
     <div class="projects-container">
       <div class="projects">
-        <h2>Some things I've made</h2>
-        <a href="#" class="card card-1">
-          <div class="card-container">
-            <h5 class="card-header card-header-text">Web Design</h5>
-            <span>2017</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aliquid?
-          </div>
+        <div class="heading-container">
+          <h2 class="heading">Some things I've made</h2>
+        </div>
+        <a href="#" class="card" id="card-1">
         </a>
-        <a href="#" class="card card-2">
-          <div class="card-container">
-            <h5 class="card-header card-header-text">Web Design</h5>
-            <span>2017</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aliquid?
-          </div>
+        <div class="card-container">
+          <h4 class="card-header card-header-text">Web Design</h4>
+          <span>2017</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aliquid? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Error, accusantium.</p>
+        </div>
+        <div class="card-container">
+          <h4 class="card-header card-header-text">Web Design</h4>
+          <span>2017</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aliquid?</p>
+        </div>
+        <a href="#" class="card" id="card-2">
         </a>
-        <a href="#" class="card card-3">
-          <div class="card-container">
-            <h5 class="card-header card-header-text">Web Design</h5>
-            <span>2017</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aliquid?
-          </div>
+        <a href="#" class="card" id="card-3">
         </a>
+        <div class="card-container">
+          <h4 class="card-header card-header-text">Web Design</h4>
+          <span>2017</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aliquid?</p>
+        </div>
 
       </div>
     </div>
 
     <div class="contact">
-      <h2>Lets get in touch!</h2>
+      <h2 class="heading">Lets get in touch!</h2>
       <div class="contact-content">
         <div class="email-me-button-container">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quibusdam quo dolorum optio excepturi sunt quasi
+            nam minima quae illo.</p>
           <a class="button" href="mailto:web@josipbrkic.com">Email Me</a>
         </div>
-        <strong>OR</strong>
         <form name="htmlform" method="post" action="toyousender.php">
 
           <input type="text" name="first_name" placeholder="Your Name" required>
@@ -223,7 +258,10 @@
     </footer>
 
   </div>
-
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+  <!--   <script src='https://raw.githubusercontent.com/matthieua/WOW/master/dist/wow.min.js'></script> -->
+  <script src="assets/js/functions.js" type="text/javascript"></script>
 </body>
 
 </html>
