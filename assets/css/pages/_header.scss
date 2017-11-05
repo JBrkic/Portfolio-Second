@@ -1,13 +1,20 @@
+.header-container {
+    background-image: url("/assets/img/bgbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
+    background-color: rgba($light, 0.9);
     .header-logo-container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
         margin: 0 rem(30) 0 0;
-        padding: rem(5);
         cursor: default;
         svg {
             align-self: stretch;
@@ -32,9 +39,10 @@
         justify-content: center;
         align-items: center;
         height: 100%;
-        width: rem(139);
-        height: rem(139);
+        width: rem(129);
+        height: rem(129);
         align-self: center;
+        background-color: rgba($dark, 0.8);
     }
     .button_container {
         position: relative;
@@ -43,9 +51,12 @@
         cursor: pointer;
         z-index: 100;
         transition: opacity .25s ease-in-out;
-        &:hover {
-            opacity: .7;
-            .middle {
+        &:hover,
+        &.active {
+            .top {
+                width: 100%;
+            }
+            .bottom {
                 width: 100%;
             }
         }
@@ -65,69 +76,46 @@
             }
         }
         span {
-            background: $main;
+            background: $light;
             border: none;
             height: 5px;
-            width: 100%;
+            width: 80%;
             position: absolute;
             top: 0;
             left: 0;
-            transition: all .35s ease-in-out;
+            transition: all .3s ease-in-out;
             cursor: pointer;
             &:nth-of-type(2) {
                 top: 11px;
-                width: 70%;
+                width: 100%;
             }
             &:nth-of-type(3) {
                 top: 22px;
+                width: 70%;
             }
         }
     }
-    /* .nav {
-        display: flex;
-        justify-content: center;
-        background-color: $dark;
-        box-shadow: $shadow;
-        a {
-            position: relative;
-            display: flex;
-            align-items: center;
-            align-content: center;
-            color: $light;
-            text-transform: uppercase;
-            font-weight: 300;
-            font-size: rem(18);
-            letter-spacing: rem(1);
-            padding: 0 rem(30);
-            text-decoration: none;
-            z-index: 1;
-            transition: all 300ms ease-in-out;
-            &:hover {
-                box-shadow: $shadow-large;
-                background-color: $main;
-                transform: translateY(rem(-2));
-            }
-        }
-    } */
     .overlay {
         position: fixed;
-        background: rgba($dark, 0.95);
+        background: rgba($dark, 1);
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 0%;
+        right: 0;
+        width: 50%;
+        height: 100%;
         opacity: 1;
+        transform: scalex(0);
+        transform-origin: right;
         visibility: hidden;
-        transition: opacity .3s, visibility .3s, height .3s;
+        transition: opacity .3s, visibility .3s, transform .3s;
         overflow: hidden;
         z-index: 99;
         &.open {
             opacity: 1;
             visibility: visible;
-            height: 100%;
+            transform: scalex(1);
             li {
                 animation: fadeInUp .5s ease forwards;
-                animation-delay: .35s;
+                animation-delay: .25s;
                 &:nth-of-type(2) {
                     animation-delay: .4s;
                 }
@@ -196,6 +184,32 @@
         100% {
             opacity: 1;
             bottom: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header {
+        .header-logo-container {
+            svg {
+                align-self: stretch;
+                padding: rem(10) rem(20);
+                fill: $light;
+                background-color: $main;
+            }
+            h1 {
+                display: none;
+            }
+        }
+        .button-wrap {
+            height: rem(85);
+            width: rem(85);
+        }
+        .overlay {
+            width: 75%;
+            nav {
+                font-size: rem(32);
+            }
         }
     }
 }
